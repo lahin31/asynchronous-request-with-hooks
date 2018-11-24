@@ -21,7 +21,7 @@ function App() {
       });
   }, []); //  Don't forget to put [] square brackets, which will help to run it only after the dom render(once)
 
-  const deleteDummyUsers = index => {
+  const deleteDummyUser = index => {
     const _dummyUsers = [...dummyUsers];
     _dummyUsers.splice(index, 1);
     setDummyUsers(_dummyUsers);
@@ -44,7 +44,7 @@ function App() {
               <li key={dummyUser.id}>
                 <b>Name</b>:{dummyUser.name}
                 <b> ID</b>: {dummyUser.id}
-                <button onClick={() => deleteDummyUsers(i)}>Delete</button>
+                <button onClick={() => deleteDummyUser(i)}>Delete</button>
               </li>
             );
           })}
